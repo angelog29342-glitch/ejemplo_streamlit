@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
 
-st.set_page_config(page_title="Ventas de autos", page_icon="🚗")
+st.set_page_config(page_title="Ventas de motos", page_icon="🚗")
 st.title("🚗 Ventas de autos por color")
 
 
