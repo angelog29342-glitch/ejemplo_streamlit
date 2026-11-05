@@ -36,7 +36,7 @@ col2.metric(
 )
 
 # --- Gráfico 1: ventas por color ---
-st.subheader("Ventas totales por color")
+st.subheader("Robos totales por color")
 por_color = filtrado.groupby("color")["unidades"].sum().sort_values(ascending=False)
 fig1, ax1 = plt.subplots()
 ax1.bar(por_color.index, por_color.values, color="steelblue")
@@ -44,7 +44,7 @@ ax1.set_ylabel("Unidades")
 st.pyplot(fig1)
 
 # --- Gráfico 2: evolución mensual ---
-st.subheader("Evolución mensual")
+st.subheader("Cambios mensuales")
 pivot = filtrado.pivot_table(index="fecha", columns="color", values="unidades", aggfunc="sum")
 fig2, ax2 = plt.subplots()
 pivot.plot(ax=ax2, marker="o")
